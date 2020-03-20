@@ -1,2 +1,2 @@
 # wsstorage
-Micro system storage with nodejs
+Experimental Micro system storage with nodejs
