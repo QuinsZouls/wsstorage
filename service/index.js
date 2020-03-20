@@ -15,7 +15,8 @@ async function waitSetFile(file) {
 async function waitGetFile(filePath, ws) {
   let file = await FileManager.getFile(filePath);
   if (!file) {
-    ws.close(404);
+    ws.send('false');
+    ws.close();
   } else {
     ws.send(file, { binary: true });
   }
@@ -51,7 +52,7 @@ ws.on('connection', (ws, req) => {
         ws.close();
         break;
       default:
-        ws.close(403);
+        ws.close();
         break;
     }
   });
