@@ -5,8 +5,7 @@ function verifyConnection(info, cb) {
   } else {
     if (
       Authorization ===
-      `Sharabiz ${process.env.USERNAME || 'root'}:${process.env.PASSWORD ||
-        'root'}`
+      `Sharabiz ${process.env.AUTH_USERNAME}:${process.env.AUTH_PASSWORD}`
     ) {
       cb(true);
     } else {

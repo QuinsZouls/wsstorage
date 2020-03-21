@@ -5,7 +5,7 @@ const unzip = require('./src/unzip');
 const verifyClient = require('./src/Secure/verifyConnection');
 
 const ws = new WebSocket.Server({
-  port: process.env.PORT || 8026,
+  port: process.env.PORT || 8032,
   verifyClient
 });
 

@@ -10,6 +10,17 @@ RUN npm install
 # Bundle app source
 COPY . /usr/src/app
 
-EXPOSE 8026
+EXPOSE 8032
+# Env
+
+ARG PORT=8032
+ENV PORT=${PORT}
+
+ARG USERNAME=root
+ENV AUTH_USERNAME=${USERNAME}
+
+ARG PASSWORD=root
+ENV AUTH_PASSWORD=${PASSWORD}
+
 
 CMD [ "node", "index" ]
